@@ -1,6 +1,7 @@
 extends Area3D
 
 @export var dude: Node3D
+@export var targetArea: Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,3 +20,5 @@ func _on_body_entered(body):
 	# teleport dude to a sit
 	dude.global_transform = body.get_node("Seat").global_transform
 	dude.sit()
+	$GlowArea.hide()
+	targetArea.show()
