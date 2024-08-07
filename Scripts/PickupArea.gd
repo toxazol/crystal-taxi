@@ -21,4 +21,7 @@ func _on_body_entered(body):
 	dude.global_transform = body.get_node("Seat").global_transform
 	dude.sit()
 	$GlowArea.hide()
-	targetArea.show()
+	if targetArea:
+		targetArea.show()
+	else:
+		print("Thanks for the ride!")

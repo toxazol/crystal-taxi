@@ -18,19 +18,16 @@ void vertex() {
 void fragment() {
     // Use height for vertical glow effect
     float glow_gradient = -height / cylinder_h;
-    
     // Pulsating effect
     float pulse = (sin(TIME * pulse_speed) + 1.0) * 0.5;
-	
     
-    ALBEDO = glow_color.rgb;
+	ALBEDO = glow_color.rgb;
     //EMISSION = glow_color.rgb * glow_strength * glow_gradient * pulse;
-	if(height == -cylinder_h/2.0) {
+	if(height == -cylinder_h/2.0) { // bottom cap stays the same
 		ALPHA = bottom_alpha;
 	} else {
 		ALPHA = glow_gradient * pulse;
 	}
-
 }
 
 //void light() {
