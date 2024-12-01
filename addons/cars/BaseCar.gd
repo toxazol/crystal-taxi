@@ -49,7 +49,3 @@ func _physics_process(delta):
 
 func traction(speed):
 	apply_central_force(Vector3.DOWN*speed)
-
-
-
-
