@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfw4lkaqdkye2"]
+
+[ext_resource type="PackedScene" uid="uid://j7p6cos81wf6" path="res://Models/Model_car_wheel_large.fbx" id="1_ylqq1"]
+[ext_resource type="PackedScene" uid="uid://ccq3ciu4jhnqd" path="res://Models/PlayerCar/Model_car_wheel_large.gltf" id="2_x5ann"]
+
+[node name="Root Scene" instance=ExtResource("1_ylqq1")]
+
+[node name="Model_car_wheel_large2" parent="." index="0" instance=ExtResource("2_x5ann")]
+
+[node name="RootNode" parent="." index="1"]
+visible = false
+
+[node name="Model_car_wheel_large" parent="RootNode" index="0"]
+visible = false
