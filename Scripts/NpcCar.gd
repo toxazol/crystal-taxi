@@ -6,7 +6,6 @@ extends VehicleBody3D
 var steer_target = 0
 @export var engine_force_value = 20
 
-@export var test_destination: Node3D
 @export var move_limit_sq: float = 25.0
 
 var curPathIdx = 0
@@ -21,11 +20,9 @@ func _physics_process(delta):
 	#print_debug(curPathIdx)
 
 	var isMove = true
-	#var target_vector = test_destination.position - position
 	var target_vector = path.curve.get_point_position(curPathIdx) - position
 	
-	print_debug(test_destination.position)
-	print_debug(path.curve.get_point_position(curPathIdx))
+	#print_debug(path.curve.get_point_position(curPathIdx))
 
 	
 	if target_vector.length_squared() < move_limit_sq:

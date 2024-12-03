@@ -16,7 +16,7 @@ operator = 2
 operator = 2
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_p0q56"]
-constant = 2.5
+constant = 1.0
 
 [resource]
 code = "shader_type spatial;
@@ -41,7 +41,7 @@ void fragment() {
 
 
 // FloatConstant:7
-	float n_out7p0 = 2.500000;
+	float n_out7p0 = 1.000000;
 
 
 // VectorOp:6
@@ -55,7 +55,7 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-250.47, -228.398)
+graph_offset = Vector2(12.8627, 258.209)
 nodes/fragment/0/position = Vector2(1240, 40)
 nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_w6v4b")
 nodes/fragment/2/position = Vector2(40, 320)
