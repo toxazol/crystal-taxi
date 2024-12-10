@@ -11,22 +11,32 @@ var steer_target = 0
 var curPathIdx = 0
 @export var path: Path3D
 
+var isMove = true
 
 func _physics_process(delta):
+
+	if isMove:
+		engine_force = -engine_force_value
+		brake = 0
+	else:
+		engine_force = 0
+		brake = 2
+		return
 	
 	var speed = linear_velocity.length()*Engine.get_frames_per_second()*delta
 	traction(speed)
 	
+	if speed < 20 and speed != 0:
+		engine_force = clamp(-engine_force_value * 2 / speed, -300, 0)
+	
 	#print_debug(curPathIdx)
 
-	var isMove = true
 	var target_vector = path.curve.get_point_position(curPathIdx) - position
 	
 	#print_debug(path.curve.get_point_position(curPathIdx))
 
 	
 	if target_vector.length_squared() < move_limit_sq:
-		isMove = false
 		curPathIdx += 1
 		if curPathIdx >= path.curve.get_point_count():
 			curPathIdx -= path.curve.get_point_count()
@@ -35,16 +45,16 @@ func _physics_process(delta):
 	steer_target = fwd.signed_angle_to(target_vector, Vector3.UP)
 	steer_target *= STEER_LIMIT
 
-	engine_force = 0
-	
-	if isMove:
-		engine_force = -engine_force_value
-	else:
-		brake = 3
 		
 	steering = move_toward(steering, steer_target, STEER_SPEED * delta)
 
 
-
 func traction(speed):
 	apply_central_force(Vector3.DOWN*speed)
+
+func on_red_light():
+	print_debug("i have to stop")
+	isMove = false
+	
+func on_green_light():
+	isMove = true
