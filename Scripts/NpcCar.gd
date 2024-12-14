@@ -18,9 +18,11 @@ func _physics_process(delta):
 	if isMove:
 		engine_force = -engine_force_value
 		brake = 0
+		$RearLights.visible = false
 	else:
 		engine_force = 0
 		brake = 2
+		$RearLights.visible = true
 		return
 	
 	var speed = linear_velocity.length()*Engine.get_frames_per_second()*delta
@@ -53,8 +55,17 @@ func traction(speed):
 	apply_central_force(Vector3.DOWN*speed)
 
 func on_red_light():
-	print_debug("i have to stop")
+	#print_debug("i have to stop")
 	isMove = false
 	
 func on_green_light():
 	isMove = true
+
+
+func _on_monitor_area_body_entered(body: Node3D) -> void:
+	isMove = false
+
+
+func _on_monitor_area_body_exited(body: Node3D) -> void:
+	if $MonitorArea.get_overlapping_bodies().is_empty():
+		isMove = true

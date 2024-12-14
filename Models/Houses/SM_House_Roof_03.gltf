@@ -1,0 +1,100 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.8.19",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "SM_House_Roof_03"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Plane.011",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 36,
+            "max" : [
+                2.512632369995117,
+                4.431133270263672,
+                2
+            ],
+            "min" : [
+                -2.512632369995117,
+                3.3805859088897705,
+                -2
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 36,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 36,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 54,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 432,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 432,
+            "byteOffset" : 432
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 288,
+            "byteOffset" : 864
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 108,
+            "byteOffset" : 1152
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1260,
+            "uri" : "data:application/octet-stream;base64,UIrtv9jLjUAAAABAUIrtv9jLjUAAAABAUIrtv9jLjUAAAABAUYrtP9jLjUAAAABAUYrtP9jLjUAAAABAUYrtP9jLjUAAAABAUYrtv9jLjUAAAADAUYrtv9jLjUAAAADAUYrtv9jLjUAAAADAUIrtP9jLjUAAAADAUIrtP9jLjUAAAADAUIrtP9jLjUAAAADA+M4gwO1wbkAAAADA+M4gwO1wbkAAAADA+M4gwO1wbkAAAADA+M4gwO1wbkAAAADA+M4gwO1wbkAAAABA+M4gwO1wbkAAAABA+M4gwO1wbkAAAABA+M4gwO1wbkAAAABA+M4gQO1wbkAAAABA+M4gQO1wbkAAAABA+M4gQO1wbkAAAABA+M4gQO1wbkAAAABA+M4gQO1wbkAAAADA+M4gQO1wbkAAAADA+M4gQO1wbkAAAADA+M4gQO1wbkAAAADAYGPkv4VbWEAAAADAYGPkv4VbWEAAAADAYGPkv4VbWEAAAABAYGPkv4VbWEAAAABAYGPkP4VbWEAAAABAYGPkP4VbWEAAAABAYGPkP4VbWEAAAADAYGPkP4VbWEAAAADAAAAAAAAAgL8AAACAAAAAAOwhprMAAIC/+lw7P+dxLr8AAACA+lw7v+dxLr8AAACAAAAAAAAAgL8AAACAAAAAAOwhprMAAIC/AAAAAAAAgL8AAACAAAAAAAAAAAAAAIA/+lw7P+dxLr8AAACA+lw7v+dxLr8AAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/nTTbPtRZZz8AAACA+lw7P+dxLr8AAACAAAAAAOwhprMAAIC/AAAAAAAAAAAAAIC/nTTbPtRZZz8AAACA+lw7P+dxLr8AAACA+lw7v+dxLr8AAACAnTTbvtRZZz8AAACAAAAAAOwhprMAAIC/AAAAAAAAAAAAAIC/+lw7v+dxLr8AAACAnTTbvtRZZz8AAACAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/nTTbPtRZZz8AAACAAAAAAAAAAAAAAIC/nTTbPtRZZz8AAACAnTTbvtRZZz8AAACAAAAAAAAAAAAAAIC/nTTbvtRZZz8AAACAAAAAAAAAAAAAAIA/AAAAABaTcT+hzmY9AACAPwAAAAAVk3E/AACAPxaTcT8Wk3E/AACAPwAAgD8Wk3E/AAAAALDOZj0AAAAAoM5mPQAAAACgzmY9AACAP7DOZj0AAIA/oM5mPQAAgD+wzmY9AAAAAJDJKj0AAAAAoMkqPQAAAACQySo9AAAAAKDJKj0AAAAAZ1N1PwAAAABmU3U/AAAAAGZTdT8AAAAAZ1N1PwAAgD9mU3U/AACAP2dTdT8AAIA/ZlN1PwAAgD9nU3U/AACAP5DJKj0AAIA/oMkqPQAAgD+QySo9AACAP6DJKj0AAAAA4A5xPQAAAADgDnE9AAAAABLvcD8AAAAAEu9wPwAAgD8S73A/AACAPxLvcD8AAIA/4A5xPQAAgD/gDnE9EAABAAUAEAAFABYAFQAZACIAFQAiACAAAwAJABgAAwAYABQABwANABoABwAaAAsAAAAGAAoAAAAKAAQAHAAjABsAHAAbAAwAEQAXACEAEQAhAB4ACAACABMACAATAA8ADgASAB8ADgAfAB0A"
+        }
+    ]
+}
