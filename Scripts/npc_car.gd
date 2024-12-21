@@ -18,11 +18,13 @@ func _physics_process(delta):
 	if isMove:
 		engine_force = -engine_force_value
 		brake = 0
-		$RearLights.visible = false
+		$ActiveRearLights.visible = false
+		$InactiveRearLights.visible = true
 	else:
 		engine_force = 0
 		brake = 2
-		$RearLights.visible = true
+		$ActiveRearLights.visible = true
+		$InactiveRearLights.visible = false
 		return
 	
 	var speed = linear_velocity.length()*Engine.get_frames_per_second()*delta

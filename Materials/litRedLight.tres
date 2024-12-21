@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dpgucnc03bdvd"]
+
+[ext_resource type="Texture2D" uid="uid://t7mbfduxeaw2" path="res://Models/Cars/lightRedLight.png" id="1_8ckn6"]
+
+[resource]
+resource_name = "BackLight"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_8ckn6")

@@ -52,5 +52,6 @@ func pick_up():
 	if targetArea:
 		targetArea.isActive = true
 		targetArea.show()
+		get_parent().arrow_look_at(targetArea)
 		
 	current_car = null

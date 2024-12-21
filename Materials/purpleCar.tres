@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bhgwndg4drn4p"]
+
+[ext_resource type="Texture2D" uid="uid://c3xeiuba1h78d" path="res://Models/Cars/T_NPC_Car_BaseColor_Purple.png" id="1_ioace"]
+
+[resource]
+resource_name = "NPC_car"
+cull_mode = 2
+albedo_texture = ExtResource("1_ioace")
