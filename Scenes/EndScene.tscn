@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c37mn315o6tja"]
 
-[ext_resource type="Texture2D" uid="uid://bmutwjkl2q036" path="res://Materials/Screenshot (45).png" id="2_lo3j2"]
+[ext_resource type="Texture2D" uid="uid://cupk6oxwwbg3t" path="res://Materials/end_screen_text.png" id="1_liekv"]
 
 [node name="EndScene" type="Control"]
 layout_mode = 3
@@ -11,8 +11,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_lo3j2")
-flip_v = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_liekv")
+expand_mode = 2

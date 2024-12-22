@@ -16,7 +16,8 @@ func _ready():
 func _process(delta):
 	if current_passenger:
 		if current_passenger.linear_velocity.length() < maxCarSpeed:
-			dropOff()
+			if current_passenger in get_overlapping_bodies():
+				dropOff()
 
 
 func _on_body_entered(dude):

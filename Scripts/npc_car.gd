@@ -13,6 +13,22 @@ var curPathIdx = 0
 
 var isMove = true
 
+func _ready() -> void:
+	# init curPathIdx with the closest point of path to the car
+	var minIdx = 0
+	var minDistSq = getSqDistToPoint(minIdx)
+	
+	for i in range(0, path.curve.get_point_count()):
+		var dist = getSqDistToPoint(i)
+		if dist < minDistSq:
+			minDistSq = dist
+			minIdx = i
+	curPathIdx = minIdx
+
+func getSqDistToPoint(idx):
+	var target_vector = path.curve.get_point_position(idx) + path.position - position
+	return target_vector.length_squared()
+
 func _physics_process(delta):
 
 	if isMove:
@@ -32,16 +48,12 @@ func _physics_process(delta):
 	
 	if speed < 20 and speed != 0:
 		engine_force = clamp(-engine_force_value * 2 / speed, -300, 0)
-	
-	#print_debug(curPathIdx)
 
-	var target_vector = path.curve.get_point_position(curPathIdx) - position
-	
-	#print_debug(path.curve.get_point_position(curPathIdx))
-
+	var target_vector = path.curve.get_point_position(curPathIdx) + path.position - position
 	
 	if target_vector.length_squared() < move_limit_sq:
 		curPathIdx += 1
+		
 		if curPathIdx >= path.curve.get_point_count():
 			curPathIdx -= path.curve.get_point_count()
 	

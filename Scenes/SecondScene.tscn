@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5od75g3wmo6h"]
+
+[ext_resource type="Script" path="res://Scripts/second_scene.gd" id="1_u8yd3"]
+[ext_resource type="Texture2D" uid="uid://be0egh0k4kddx" path="res://Materials/start_screen_2_text.png" id="2_e63d8"]
+
+[node name="SecondScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u8yd3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_e63d8")
+expand_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 167.0
+offset_top = -156.0
+offset_right = 311.0
+offset_bottom = -113.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Играть
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

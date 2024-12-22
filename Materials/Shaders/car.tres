@@ -1,13 +1,13 @@
 [gd_resource type="VisualShader" load_steps=8 format=3 uid="uid://tylditeneyld"]
 
 [ext_resource type="Texture2D" uid="uid://dhy7o7sox858v" path="res://Models/Model_car_body_T_Atlas_Car_BaseColor.png" id="1_76lyr"]
-[ext_resource type="Texture2D" uid="uid://beick5p888534" path="res://Materials/Shaders/T_Atlas_Car_Emission.png" id="2_2nat4"]
+[ext_resource type="Texture2D" uid="uid://beick5p888534" path="res://Materials/T_Atlas_Car_Emission.png" id="2_35pu7"]
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_w6v4b"]
 texture = ExtResource("1_76lyr")
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_tnlvl"]
-texture = ExtResource("2_2nat4")
+texture = ExtResource("2_35pu7")
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_a0hw2"]
 operator = 2

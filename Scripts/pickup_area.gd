@@ -17,7 +17,8 @@ func _ready():
 func _process(delta):
 	if current_car:
 		if current_car.linear_velocity.length() < maxCarSpeed:
-			pick_up()
+			if current_car in get_overlapping_bodies():
+				pick_up()
 
 
 func _on_body_entered(playerCar):

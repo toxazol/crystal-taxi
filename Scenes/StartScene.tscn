@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bgk67md0onvhl"]
 
-[ext_resource type="Script" path="res://Scripts/start_scene.gd" id="1_bgitl"]
-[ext_resource type="Texture2D" uid="uid://bmutwjkl2q036" path="res://Materials/Screenshot (45).png" id="1_t7ypf"]
+[ext_resource type="Script" path="res://Scripts/start_scene.gd" id="1_aur48"]
+[ext_resource type="Texture2D" uid="uid://b21sxqdwfkq7k" path="res://Materials/start_screen_text.png" id="2_ksvj8"]
 
 [node name="StartScene" type="Control"]
 layout_mode = 3
@@ -10,13 +10,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_bgitl")
+script = ExtResource("1_aur48")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("1_t7ypf")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ksvj8")
+expand_mode = 2
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -25,12 +29,12 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -72.0
-offset_top = -91.0
-offset_right = 72.0
-offset_bottom = -48.0
+offset_left = -70.0
+offset_top = -142.0
+offset_right = 74.0
+offset_bottom = -99.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "START"
+text = "Дальше"
 
-[connection signal="pressed" from="Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
