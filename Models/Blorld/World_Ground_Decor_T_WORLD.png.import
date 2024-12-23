@@ -1,0 +1,37 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ciqofhvelgu8g"
+path="res://.godot/imported/World_Ground_Decor_T_WORLD.png-dc63d3b6018836d3cabb789a3ffa0e60.ctex"
+metadata={
+"vram_texture": false
+}
+generator_parameters={
+"md5": "cb89fb3cf5f26c7e74891ff2e77a3272"
+}
+
+[deps]
+
+source_file="res://Models/Blorld/World_Ground_Decor_T_WORLD.png"
+dest_files=["res://.godot/imported/World_Ground_Decor_T_WORLD.png-dc63d3b6018836d3cabb789a3ffa0e60.ctex"]
+
+[params]
+
+compress/mode=4
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

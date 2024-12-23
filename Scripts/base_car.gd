@@ -4,6 +4,7 @@ extends VehicleBody3D
 @export var STEER_SPEED = 1.5
 @export var STEER_LIMIT = 0.6
 @export var engine_force_value = 35
+@export var pitch_div = 1.5
 var steer_target = 0
 
 func _ready() -> void:
@@ -25,20 +26,32 @@ func _physics_process(delta):
 		if signed_speed < -1:
 			brake = 2
 		else:
-			engine_force = engine_force_value
+			enforce_engine(engine_force_value)
 	elif Input.is_action_pressed("ui_up"):
 		if signed_speed > 1:
 			brake = 2
 		else:
 			# Increase engine force at low speeds to make the initial acceleration faster.
 			if speed < 10:
-				engine_force = -clamp(engine_force_value * 10 / speed, 0, 200)
+				enforce_engine(-clamp(engine_force_value * 10 / speed, 0, 200))
 			else:
-				engine_force = -engine_force_value
+				enforce_engine(-engine_force_value)
 	else:
-		engine_force = 0
+		enforce_engine(0)
 		brake = 0
 
+func enforce_engine(force):
+	engine_force = force
+	#var pitch = abs(engine_force) / pitch_div
+	var pitch = pitch_div if abs(engine_force) > 0 else 1
+	#if pitch < 1:
+		#pitch = 1
+	$brbrSound.pitch_scale = pitch
+	if pitch > 1:
+		if !$brrrrSound.playing:
+			$brrrrSound.play()
+	else:
+		$brrrrSound.playing = false
 
 
 
