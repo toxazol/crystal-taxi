@@ -1,9 +1,14 @@
 extends Control
 
+# Create an AsyncScene instance to handle the loading process
+var scene : AsyncScene = null
+
+# Export the path to the scene you want to load
+@export var scenePath : String = "res://Scenes/DemoLevel.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	scene = AsyncScene.new(scenePath, AsyncScene.LoadingSceneOperation.Replace)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -12,4 +17,8 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/DemoLevel.tscn")
+	$Transition2.play("fade_out")
+
+
+func _on_transition_animation_finished(anim_name: StringName) -> void:
+	scene.ChangeScene()

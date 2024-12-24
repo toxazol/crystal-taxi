@@ -47,7 +47,7 @@ func _physics_process(delta):
 	traction(speed)
 	
 	if speed < 20 and speed != 0:
-		engine_force = clamp(-engine_force_value * 2 / speed, -300, 0)
+		engine_force = clamp(-engine_force_value * 2 / speed, -100, 0)
 
 	var target_vector = path.curve.get_point_position(curPathIdx) + path.position - position
 	
