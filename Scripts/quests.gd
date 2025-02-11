@@ -25,8 +25,14 @@ func activate_next_quest():
 			arrow_look_at(area)
 			return
 	# all areas have been visited:
-	get_tree().change_scene_to_file("res://Scenes/EndScene.tscn")
+	#get_tree().change_scene_to_file("res://Scenes/EndScene.tscn")
 
+	stop_all_audio()
+	AsyncScene.new("res://Scenes/EndScene.tscn", AsyncScene.LoadingSceneOperation.ReplaceImmediate)
 
+func stop_all_audio():
+	for node in get_tree().get_nodes_in_group("audio"):
+		node.stop()
+			
 func arrow_look_at(targetArea):
 	navArrow.look_at(targetArea)

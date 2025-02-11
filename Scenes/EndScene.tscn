@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c37mn315o6tja"]
+[gd_scene load_steps=4 format=3 uid="uid://c37mn315o6tja"]
 
+[ext_resource type="Script" path="res://Scripts/end_scene.gd" id="1_b7bs3"]
 [ext_resource type="Texture2D" uid="uid://cupk6oxwwbg3t" path="res://Materials/end_screen_text.png" id="1_liekv"]
+[ext_resource type="AudioStream" uid="uid://dps4ttfiy2wjm" path="res://Audio/drums.mp3" id="3_u4fyt"]
 
 [node name="EndScene" type="Control"]
 layout_mode = 3
@@ -9,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_b7bs3")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -19,3 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_liekv")
 expand_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_u4fyt")
+autoplay = true
