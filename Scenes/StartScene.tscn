@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bgk67md0onvhl"]
 
 [ext_resource type="Script" path="res://Scripts/start_scene.gd" id="1_aur48"]
-[ext_resource type="Texture2D" uid="uid://b21sxqdwfkq7k" path="res://Materials/start_screen_text.png" id="2_ksvj8"]
+[ext_resource type="Texture2D" uid="uid://c2pu5ts14tx5x" path="res://Materials/start_screen_text_eng.png" id="2_55ldr"]
 
 [sub_resource type="Animation" id="Animation_1wys8"]
 length = 0.001
@@ -79,7 +79,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_ksvj8")
+texture = ExtResource("2_55ldr")
 expand_mode = 2
 
 [node name="Button" type="Button" parent="."]
@@ -96,7 +96,7 @@ offset_bottom = -38.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 25
-text = "Дальше"
+text = "Next"
 
 [node name="Transition" type="AnimationPlayer" parent="."]
 libraries = {

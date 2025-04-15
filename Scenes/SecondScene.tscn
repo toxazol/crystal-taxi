@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b5od75g3wmo6h"]
 
 [ext_resource type="Script" path="res://Scripts/second_scene.gd" id="1_u8yd3"]
-[ext_resource type="Texture2D" uid="uid://be0egh0k4kddx" path="res://Materials/start_screen_2_text.png" id="2_e63d8"]
+[ext_resource type="Texture2D" uid="uid://bqkp8ghv8xa5e" path="res://Materials/start_screen_2_text_eng.png" id="2_c2qyk"]
 
 [sub_resource type="Animation" id="Animation_s1s2m"]
 length = 0.001
@@ -139,7 +139,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_e63d8")
+texture = ExtResource("2_c2qyk")
 expand_mode = 2
 
 [node name="Button" type="Button" parent="."]
@@ -156,8 +156,7 @@ offset_bottom = -38.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 25
-text = "Играть
-"
+text = "Play"
 
 [node name="Transition1" type="AnimationPlayer" parent="."]
 libraries = {
